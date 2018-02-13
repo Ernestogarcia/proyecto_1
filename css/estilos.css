@@ -1,0 +1,111 @@
+
+/* borrar los margenes que se agrega por defecto*/
+*{
+	
+	margin: 0;
+	padding:0;
+
+}
+/*le agregamos color blanco al cuerpo */
+body{
+	background: #FFFFFA;
+}
+/*Se le agrega al header un ancho de 100% para decirle que va a abarcar toda la pagina*/
+
+header {
+	width: 100%;
+}
+
+header nav {
+width: 95%;
+max-width: 1000px;
+margin:20px auto;
+background: #024959;
+z-index: 1000;
+}
+/*borrar el icomo de menu*/
+.menu_bar {
+
+	display: none;
+}
+/* se resuelve el proble al poner las propiedades a los li de abajo*/
+header nav ul {
+	overflow: hidden;
+	list-style: none;
+}
+/* para poner un item a lado del otro hacia la derecha */
+/*header nav ul li {
+	float: left;
+}*/
+header nav ul li {
+   display: inline-block;
+   position: relative;
+}
+
+header nav ul li a {
+	color:#fff;
+
+	padding: 20px;
+
+	display: block;
+	text-decoration: none;
+}
+/* para poner los iconos a la izquierda*/
+header nav ul li span {
+	margin-right: 10px;
+}
+/*para cuando el cursor pase encima de los item cambie de color*/
+header nav ul li a:hover{
+     background: #037E8C;
+
+}
+
+section {
+	padding: 20px;
+
+}
+/*Una media query consiste en un tipo de medio y 
+al menos una consulta que limita las hojas de estilo
+ utilizando características del medio como ancho,
+  alto y color.  */
+@media screen  and (max-width: 800px){
+
+header nav {
+	width: 80%;
+	height: 100%;
+	left: -100%;
+	margin:0;
+	position: fixed;
+}
+
+header nav ul li {
+	display: block;
+	float: none;
+	border-bottom:1px solid rgba(255,255,255, .3);
+
+}
+
+.menu_bar{
+	display: block;
+	width: 100%;
+	background: #ccc;
+}
+.menu_bar .bt-menu{
+	display: block;
+	padding: 20px;
+	background: #024959;
+	color:#fff;
+	text-decoration: none;
+	font-weight: bold; 
+	font-size: 25px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+   }
+
+.menu_bar span {
+	float: right;
+	font-size: 40px;
+}
+	
+}
